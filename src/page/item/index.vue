@@ -7,9 +7,17 @@
     <div>
       <div class="item_back item_container_style">
         <div class="item_list_container">
-
+          <header class="item_title"></header>
+          <ul>
+            <li class="item_list">
+              <span class="option_style"></span>
+              <span class="option_detail"></span>
+            </li>
+          </ul>
         </div>
       </div>
+      <span class="next_item button_style"></span>
+      <span class="submit_item button_style"></span>
     </div>
   </div>
 </template>
@@ -55,11 +63,6 @@
     height: 11.625rem;
     width: 13.15rem;
   }
-  .home_logo {
-    background: url('~assets/images/1-2.png') no-repeat;
-    background-size: 13.142rem 100%;
-    background-position: right center;
-  }
   .button_style {
     position: absolute;
     top: 16.5rem;
@@ -71,7 +74,58 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
-  .start {
-    background-image: url('~assets/images/1-4.png');
+  .item_back {
+    background-image: url('~assets/images/2-1.png');
+    background-size: 100% 100%;
+  }
+  .next_item {
+    background-image: url('~assets/images/2-2.png');
+  }
+  .submit_item {
+    background-image: url('~assets/images/3-1.png');
+  }
+  .item_list_container {
+    position: absolute;
+    height: 7rem;
+    width: 8rem;
+    top: 2.4rem;
+    left: 3rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  .item_title {
+    font-size: 0.65rem;
+    color: #fff;
+    line-height: 0.7rem;
+  }
+  .item_list {
+    font-size: 0;
+    margin-top: 0.4rem;
+    width: 10rem;
+    span {
+      display: inline-block;
+      font-size: 0.6rem;
+      color: #fff;
+      vertical-align: middle;
+    }
+    .option_style {
+      height: 0.725rem;
+      width: 0.725rem;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      line-height: 0.725rem;
+      text-align: center;
+      margin-right: 0.3rem;
+      font-size: 0.5rem;
+      font-family: "Arial";
+    }
+    .has_choosed {
+      background-color: #ffd400;
+      color: #575757;
+      border-color: #ffd400;
+    }
+    .option_detail {
+      width: 7.5rem;
+      padding-top: 0.11rem;
+    }
   }
 </style>
