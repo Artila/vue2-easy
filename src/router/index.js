@@ -22,6 +22,11 @@ export default new Router({
       path: '/item',
       name: 'Item',
       component: r => require.ensure([], () => r(require('@/page/item')), 'Item')
+    },
+    {
+      path: '/score',
+      name: 'Score',
+      component: r => require.ensure([], () => r(require('@/page/score')), 'Score')
     }
   ]
 })
