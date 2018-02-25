@@ -5,8 +5,11 @@ import App from './App'
 import router from './router'
 // 引入rem
 import './config/rem'
+// 引入ajax
+import './config/ajax'
 // 引入 common 的 style, 失败，改为在 app.vue 引入
 // import './assets/style/common'
+import store from './store'
 
 Vue.config.productionTip = false
 
@@ -14,6 +17,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
