@@ -16,17 +16,24 @@ export default (type='GET', url='', data={}, async=true) => {
       Object.keys(data).forEach(key => {
         dataStr += key + '=' + data[key] + '&';
       })
+      
       dataStr = dataStr.substr(0, dataStr.lastIndexOf('&'));
       url = url + '?' + dataStr;
+
       requestObj.open(type, url, async);
       requestObj.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       requestObj.send();
+
     } else if (type == 'POST') {
+
       requestObj.open(type, url, async);
       requestObj.setRequestHeader("Content-type", "application/json");
       requestObj.send(JSON.stringify(data));
+
     } else {
+
       reject('error type');
+
     }
 
     requestObj.onreadystatechange = () => {
