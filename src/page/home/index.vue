@@ -1,8 +1,7 @@
 <template>
   <div class="home_container">
     <header class="top_tips">
-      <span class="num_tip">0</span>
-      <span class="num_tip">题目</span>
+      <span class="num_tip">{{level}}</span>
     </header>
     <div>
       <div class="home_logo item_container_style"></div>
@@ -12,13 +11,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
-  data () {
-    return {
-    }
-  },
-  components: {},
-  methods: {}
+  computed: mapState([
+    "level",       // 第几周
+  ]),
 }
 
 </script>
